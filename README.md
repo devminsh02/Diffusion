@@ -378,13 +378,13 @@ q(\mathbf{x}_t\mid\mathbf{x}_{t-1})
 간단히 각 성분의 평균이 0이고 분산이 1이라고 가정하자.
 
 ```math
-\operatorname{Var}(\mathbf{x}_{t-1})=1
+\mathrm{Var}(\mathbf{x}_{t-1})=1
 ```
 
 독립인 표준 가우시안 노이즈의 분산도 1이므로
 
 ```math
-\operatorname{Var}
+\mathrm{Var}
 \left(
 \sqrt{\alpha_t}\mathbf{x}_{t-1}
 +
@@ -747,7 +747,7 @@ p_{\mathrm{data}}(\mathbf{x})
 ```math
 t
 \sim
-\operatorname{Uniform}\{1,\ldots,T\}
+\mathrm{Uniform}\{1,\ldots,T\}
 ```
 
 3. 표준 가우시안 노이즈를 뽑는다.
@@ -1452,18 +1452,18 @@ Latent Diffusion은 먼저 오토인코더로 이미지를 압축한다. [Latent
 ```math
 \mathbf{z}_0
 =
-\operatorname{Enc}(\mathbf{x}_0)
+\mathrm{Enc}(\mathbf{x}_0)
 ```
 
 ```math
 \hat{\mathbf{x}}_0
 =
-\operatorname{Dec}(\mathbf{z}_0)
+\mathrm{Dec}(\mathbf{z}_0)
 ```
 
 - $\mathbf{z}_0$: 압축된 latent representation
-- $\operatorname{Enc}$: encoder
-- $\operatorname{Dec}$: decoder
+- $\mathrm{Enc}$: encoder
+- $\mathrm{Dec}$: decoder
 
 이후 픽셀이 아니라 latent에 노이즈를 추가한다.
 
